@@ -157,3 +157,4 @@ C:\Users\Thalio\Documents\Projects\stORM\stORM_unit_tests\obj\Debug\net8.0\refin
 C:\Users\Thalio\Documents\Projects\stORM\stORM_unit_tests\obj\Debug\net8.0\stORM_unit_tests.pdb
 C:\Users\Thalio\Documents\Projects\stORM\stORM_unit_tests\obj\Debug\net8.0\stORM_unit_tests.genruntimeconfig.cache
 C:\Users\Thalio\Documents\Projects\stORM\stORM_unit_tests\obj\Debug\net8.0\ref\stORM_unit_tests.dll
+C:\Users\Thalio\Documents\Projects\stORM\stORM_unit_tests\obj\Debug\net8.0\stORM_unit_tests.sourcelink.json
