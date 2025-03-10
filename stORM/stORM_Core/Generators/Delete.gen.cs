@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
-using BonesCore.utils;
 using BonesCoreOrm.Generators.Intefaces;
+using stORM.utils;
 using static stORM.Models.GroupByModel;
 
 namespace BonesCoreOrm.Generators;

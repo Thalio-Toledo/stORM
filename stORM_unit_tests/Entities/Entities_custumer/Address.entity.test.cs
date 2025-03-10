@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using stORM.DataAnotattions;
-using stORM_unit_tests.Entities.Entities_custumer;
 
-namespace BonesORMUnitTests.Entities.Entities_custumer;
+namespace stORM_unit_tests.Entities.Entities_custumer;
 
 [Table("DatabaseName..Address")]
 public class Address
@@ -18,5 +17,4 @@ public class Address
     [ForeignkeyFrom("Custumer")]
     public int CustumerId { get; set; }
     public Custumer Custumer { get; set; }
-
 }

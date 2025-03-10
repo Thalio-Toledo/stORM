@@ -35,6 +35,5 @@ public static class Mapper
         {
             throw new Exception("Unable to map the count of results!");
         }
-
     }
 }

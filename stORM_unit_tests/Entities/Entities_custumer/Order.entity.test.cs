@@ -2,9 +2,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using BonesORMUnitTests.Entities.Entities_custumer.Enums;
 using stORM.DataAnotattions;
-using stORM_unit_tests.Entities.Entities_custumer;
 
-namespace BonesORMUnitTests.Entities.Entities_custumer;
+namespace stORM_unit_tests.Entities.Entities_custumer;
 
 [Table("DatabaseName..Order")]
 public class Order

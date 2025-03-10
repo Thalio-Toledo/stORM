@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using stORM.DataAnotattions;
 
-namespace BonesORMUnitTests.Entities.Entities_custumer;
+namespace stORM_unit_tests.Entities.Entities_custumer;
 
 [Table("DatabaseName..Item")]
 public class Item

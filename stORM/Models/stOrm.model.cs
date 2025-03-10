@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
-using BonesCore.utils;
+using stORM.utils;
 using static stORM.Models.GroupByModel;
 using static stORM.Models.GroupByModel.Config;
 

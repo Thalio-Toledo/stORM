@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using BonesORMUnitTests.Entities.Entities_custumer;
 using stORM.DataAnotattions;
 
 namespace stORM_unit_tests.Entities.Entities_custumer;

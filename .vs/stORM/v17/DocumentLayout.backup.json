@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\translators_tests\\jointranslator.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\translators_tests\\jointranslator.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\delete_orm_tests\\delete.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\delete_orm_tests\\delete.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JoinTranslator.tests.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:04:34.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Delete.tests.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
               "RelativeDocumentMoniker": "stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DBConnectionOptions.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\ConfigOptions\\DBConnectionOptions.cs",
               "RelativeDocumentMoniker": "stORM\\ConfigOptions\\DBConnectionOptions.cs",

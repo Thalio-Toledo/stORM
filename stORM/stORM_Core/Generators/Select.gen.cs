@@ -2,10 +2,10 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 using System.Text;
-using BonesCore.utils;
 using BonesCoreOrm.Generators.Intefaces;
 using stORM.DataAnotattions;
 using stORM.Models;
+using stORM.utils;
 using static stORM.Models.GroupByModel;
 
 namespace BonesCoreOrm.Generators;

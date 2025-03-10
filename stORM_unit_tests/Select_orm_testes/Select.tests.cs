@@ -1,10 +1,9 @@
-﻿using BonesCore.utils;
-using BonesCoreOrm.Generators;
-using BonesORMUnitTests.Entities.Entities_custumer;
+﻿using BonesCoreOrm.Generators;
 using BonesORMUnitTests.Entities.Entitys_societario;
 using BonesORMUnitTests.Entities.Entitys_societario.Aux_Entitys;
 using FluentAssertions;
 using stORM.Models;
+using stORM.utils;
 using stORM_unit_tests.Entities.Entities_custumer;
 using static stORM.Models.GroupByModel;
 

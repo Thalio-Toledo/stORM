@@ -13,10 +13,7 @@ namespace BonesCore.ConfigOptions
         private SqlTransaction _transaction;
         private bool _isCommitted = false;
 
-        public string GetConnection()
-        {
-            return DefaultConnection;
-        }
+        public string GetConnection() => DefaultConnection;
 
         public string Query(string script)
         {
@@ -157,8 +154,6 @@ namespace BonesCore.ConfigOptions
 
                 throw new Exception(ex.Message);
             }
-                
-            
         }
 
         public int Execute(string script)

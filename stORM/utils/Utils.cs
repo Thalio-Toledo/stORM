@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace BonesCore.utils
+namespace stORM.utils
 {
     public class UtilsService
     {
@@ -182,7 +182,7 @@ namespace BonesCore.utils
             }
 
             return true;
-        }  
+        }
         public static bool IsNotNull(List<object> content)
         {
             if (content == null)

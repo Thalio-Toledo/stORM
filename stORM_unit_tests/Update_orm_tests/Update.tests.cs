@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BonesCore.BonesCoreOrm;
-using BonesCore.utils;
 using BonesCoreOrm.Generators;
-using BonesORMUnitTests.Entities.Entities_custumer;
 using FluentAssertions;
+using stORM.utils;
 using stORM_unit_tests.Entities.Entities_custumer;
 using static stORM.Models.GroupByModel;
 

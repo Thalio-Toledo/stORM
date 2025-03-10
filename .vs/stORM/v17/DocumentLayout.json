@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\entities\\entities_custumer\\item.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\entities\\entities_custumer\\item.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\entities\\entities_custumer\\order.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\entities\\entities_custumer\\order.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\entities\\entities_custumer\\product.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\entities\\entities_custumer\\product.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\entities\\entities_custumer\\custumer.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\entities\\entities_custumer\\custumer.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\entities\\entities_custumer\\address.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\entities\\entities_custumer\\address.entity.test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\configoptions\\dbconnectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\configoptions\\dbconnectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm_core\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm_core\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm_core\\stormcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm_core\\stormcore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\translators_tests\\jointranslator.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\translators_tests\\jointranslator.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm_unit_tests\\delete_orm_tests\\delete.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11DCFC6B-AA42-4391-9B82-05F1C1A0975C}|stORM_unit_tests\\stORM_unit_tests.csproj|solutionrelative:storm_unit_tests\\delete_orm_tests\\delete.tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\configoptions\\dbconnectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\configoptions\\dbconnectionoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,39 +66,143 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.entity.test.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Product.entity.test.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Entities\\Entities_custumer\\Product.entity.test.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Product.entity.test.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Entities\\Entities_custumer\\Product.entity.test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:24:04.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Order.entity.test.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Order.entity.test.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Entities\\Entities_custumer\\Order.entity.test.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Order.entity.test.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Entities\\Entities_custumer\\Order.entity.test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:23:54.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Item.entity.test.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Item.entity.test.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Entities\\Entities_custumer\\Item.entity.test.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Item.entity.test.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Entities\\Entities_custumer\\Item.entity.test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:23:35.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Custumer.entity.test.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Custumer.entity.test.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Entities\\Entities_custumer\\Custumer.entity.test.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Custumer.entity.test.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Entities\\Entities_custumer\\Custumer.entity.test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:23:31.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Address.entity.test.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Address.entity.test.cs",
+              "RelativeDocumentMoniker": "stORM_unit_tests\\Entities\\Entities_custumer\\Address.entity.test.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Entities\\Entities_custumer\\Address.entity.test.cs",
+              "RelativeToolTip": "stORM_unit_tests\\Entities\\Entities_custumer\\Address.entity.test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:21:11.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\utils\\Utils.cs",
+              "RelativeDocumentMoniker": "stORM\\utils\\Utils.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\utils\\Utils.cs",
+              "RelativeToolTip": "stORM\\utils\\Utils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:14:48.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Mapper.cs",
+              "RelativeDocumentMoniker": "stORM\\stORM_Core\\Mapper.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Mapper.cs",
+              "RelativeToolTip": "stORM\\stORM_Core\\Mapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:12:04.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "stORMCore.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\stORMCore.cs",
+              "RelativeDocumentMoniker": "stORM\\stORM_Core\\stORMCore.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\stORMCore.cs",
+              "RelativeToolTip": "stORM\\stORM_Core\\stORMCore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T20:12:03.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "JoinTranslator.tests.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
               "RelativeDocumentMoniker": "stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
               "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
               "RelativeToolTip": "stORM_unit_tests\\Translators_tests\\JoinTranslator.tests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T20:04:34.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Delete.tests.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
               "RelativeDocumentMoniker": "stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
               "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
               "RelativeToolTip": "stORM_unit_tests\\Delete_orm_tests\\Delete.tests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T20:04:21.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "DBConnectionOptions.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\ConfigOptions\\DBConnectionOptions.cs",
               "RelativeDocumentMoniker": "stORM\\ConfigOptions\\DBConnectionOptions.cs",
               "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\ConfigOptions\\DBConnectionOptions.cs",
               "RelativeToolTip": "stORM\\ConfigOptions\\DBConnectionOptions.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T19:59:36.36Z",
               "EditorCaption": ""

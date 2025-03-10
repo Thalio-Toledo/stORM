@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BonesORMUnitTests.Entities.Entities_custumer;
+namespace stORM_unit_tests.Entities.Entities_custumer;
 
 [Table("DatabaseName..Product")]
 public class Product

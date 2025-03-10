@@ -10,3 +10,4 @@ C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.dll
 C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\refint\stORM.dll
 C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.pdb
 C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\ref\stORM.dll
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.sourcelink.json
