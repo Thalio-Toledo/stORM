@@ -1,0 +1,12 @@
+C:\Users\Thalio\Documents\Projects\stORM\stORM\bin\Debug\net8.0\stORM.deps.json
+C:\Users\Thalio\Documents\Projects\stORM\stORM\bin\Debug\net8.0\stORM.dll
+C:\Users\Thalio\Documents\Projects\stORM\stORM\bin\Debug\net8.0\stORM.pdb
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.csproj.AssemblyReference.cache
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.AssemblyInfoInputs.cache
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.AssemblyInfo.cs
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.csproj.CoreCompileInputs.cache
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.dll
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\refint\stORM.dll
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\stORM.pdb
+C:\Users\Thalio\Documents\Projects\stORM\stORM\obj\Debug\net8.0\ref\stORM.dll

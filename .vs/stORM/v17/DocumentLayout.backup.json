@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm_core\\expressionstranslators\\whereof.translator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm_core\\expressionstranslators\\whereof.translator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\dbrepository\\dbrepository.base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\dbrepository\\dbrepository.base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm_core\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm_core\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\dbrepository\\extensions\\dbrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\dbrepository\\extensions\\dbrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WhereOf.translator.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\ExpressionsTranslators\\WhereOf.translator.cs",
+              "RelativeDocumentMoniker": "stORM\\stORM_Core\\ExpressionsTranslators\\WhereOf.translator.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\ExpressionsTranslators\\WhereOf.translator.cs",
+              "RelativeToolTip": "stORM\\stORM_Core\\ExpressionsTranslators\\WhereOf.translator.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T19:33:38.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mapper.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Mapper.cs",
+              "RelativeDocumentMoniker": "stORM\\stORM_Core\\Mapper.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Mapper.cs",
+              "RelativeToolTip": "stORM\\stORM_Core\\Mapper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T18:16:53.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DbRepository.base.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\DbRepository.base.cs",
+              "RelativeDocumentMoniker": "stORM\\DbRepository\\DbRepository.base.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\DbRepository.base.cs",
+              "RelativeToolTip": "stORM\\DbRepository\\DbRepository.base.cs",
+              "ViewState": "AgIAAOgCAAAAAAAAAAAiwPACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T16:17:33.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DbRepositoryExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "RelativeDocumentMoniker": "stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "RelativeToolTip": "stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T16:17:30.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
