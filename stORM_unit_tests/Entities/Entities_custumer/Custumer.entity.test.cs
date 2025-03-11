@@ -8,7 +8,7 @@ namespace stORM_unit_tests.Entities.Entities_custumer;
 public class Custumer
 {
     [Key]
-    public long Id { get; set; } = 0;
+    public int Id { get; set; } = 0;
     public string Name { get; set; } = "";
     public bool Active { get; set; } = true;
     public DateTime Date { get; set; }

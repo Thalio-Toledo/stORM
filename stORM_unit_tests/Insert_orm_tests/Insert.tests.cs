@@ -1,5 +1,6 @@
 ﻿using BonesCoreOrm.Generators;
 using FluentAssertions;
+using stORM.stORM_Core;
 using stORM.utils;
 using stORM_unit_tests.Entities.Entities_custumer;
 using static stORM.Models.GroupByModel;
@@ -62,5 +63,5 @@ public class InsertTests
 
         // Act & Assert
         result.NormalizeQuery().Should().Be(query.NormalizeQuery());
-    }
+    } 
 }

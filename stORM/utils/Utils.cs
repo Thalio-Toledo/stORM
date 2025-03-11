@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace stORM.utils
 {
@@ -332,6 +333,25 @@ namespace stORM.utils
                 return "00010101";
             }
         }
+
+        public static string SetColumnSQLType(Guid column) => " UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID() ";
+        public static string SetColumnSQLType(string column) => " NVARCHAR(MAX) NOT NULL";
+        public static string SetColumnSQLType(int column) => " INT NOT NULL";
+        public static string SetColumnSQLType(DateTime column) => " DATETIME NOT NULL ";
+        public static string SetColumnSQLType(bool column) => " BIT NOT NULL DEFAULT 1 ";
+
+        public static bool IsNullableProperty(PropertyInfo property)
+        {
+            // 1. Verificar se é Nullable<T>
+            if (Nullable.GetUnderlyingType(property.PropertyType) != null)
+                return true;
+
+            // 2. Verificar se é um Nullable Reference Type (C# 8+)
+            var nullableAttribute = property.CustomAttributes
+                .FirstOrDefault(a => a.AttributeType.FullName == "System.Runtime.CompilerServices.NullableAttribute");
+
+            return nullableAttribute != null;
+        }
     }
     public static class StringExtensions
     {
@@ -341,5 +361,7 @@ namespace stORM.utils
                 .Replace("\"", "")                  // Remove aspas duplas extras
                 .Trim();
     }
+
+    
 
 }
