@@ -112,6 +112,17 @@ Add your repository in the context of dependecy injection
 ``` csharp
 services.AddScoped<CustumerRepository>();
 ```
+### Inject your repository in a service or a controller and use the power of stORM
+``` csharp
+public class CustumerService {
+	private CustumerRepository _custumerRepository;
+	
+	public CustumerService (CustumerRepository repository){
+		_custumerRepository = repository;
+	}
+}
+```
+
 
 
 
