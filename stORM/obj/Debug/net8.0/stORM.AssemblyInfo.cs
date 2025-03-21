@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("stORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e51d7856b695dc19b084e832c8fb2a39f6414336")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67d3afb72872860f7ef8c39c13e3a2848135feb4")]
 [assembly: System.Reflection.AssemblyProductAttribute("stORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("stORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
