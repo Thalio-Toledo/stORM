@@ -1,6 +1,6 @@
 # stORM 
 stORM is a .NET Library highly inspired on Entity framework, used to mapper pre-existing databases, Soon the feature code first will be implemented.
-Storm allows you to create queries fast and simple. using the concepts from functional programing you can chaining methods to create complex queries and map you entities.
+Storm allows you to create queries fast and simple. Using the concepts from functional programing you can chaining methods to create complex queries and map you entities.
 
 ## Configuring connection string
 
