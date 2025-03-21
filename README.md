@@ -17,4 +17,30 @@ Using an extension method addstORM to configure stORM in you application.
 At program.cs file 
 ``` csharp
  builder.Services.AddstORM(builder.Configuration);
+```
+
+## Etities Mapping
+Create you entity that represent you table in you database
+
+### Table Annotation
+
+``` csharp
+//Decorate your entity with the table name on database
+[Table("custumer")] 
+public class Custumer{
+
+}
+```
+
+## Properties
+### PrimaryKey
+
+``` csharp
+[Table("custumer")] 
+public class Custumer{
+    //Decorate your primary key with the annotation key
+	[Key]
+	public int CustumerId {get;set;} 
+}
+
 
