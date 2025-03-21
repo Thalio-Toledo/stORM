@@ -43,4 +43,57 @@ public class Custumer{
 	public int CustumerId {get;set;} 
 }
 
+### Another Properties
+``` charp
+[Table("custumer")] 
+public class Custumer{
+	[Key]
+	public int CustumerId {get;set;}
+	public string CustumerName { get; set; }
+	public bool Active { get; set; }
+	public DateTime CreatedDate { get; set; }
+}
+
+```
+
+### Navigation Properties
+
+```csharp
+
+// One to One
+[Table("custumer")] 
+public class Custumer{
+	[Key]
+	public int CustumerId {get;set;}
+	public string CustumerName { get; set; }
+	public bool Active { get; set; }
+	public DateTime CreatedDate { get; set; }
+
+	//Decorate your ForeignKey with the annotation ForeignkeyOf and the entity name
+	[ForeignkeyOf("Adress")]
+	public int AddressID {get;set;}
+	public Adress? Adress {get;set;}
+	
+}
+
+// One to Many
+[Table("custumer")] 
+public class Custumer{
+	[Key]
+	public int CustumerId {get;set;}
+	public string CustumerName { get; set; }
+	public bool Active { get; set; }
+	public DateTime CreatedDate { get; set; }
+	
+	[ForeignkeyOf("Adress")]
+	public int AddressID {get;set;}
+	public Adress? Adress {get;set;}
+
+	//Create a List of you entity 
+	public List<Order>? Orders{ get; set; }
+}
+ 
+
+```
+
 
