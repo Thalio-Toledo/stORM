@@ -96,4 +96,17 @@ public class Custumer{
 
 ```
 
+### Repository
+stORM abastract the necessity to implement the repository pattern all you need to do is inherit from our repository.
+``` csharp
+// Create your repository using your entity
+public class CustumerRepository : DbRepository<Custumer>
+{
+    public CustumerRepository(stORMCore orm) : base(orm)
+    {
+    }
+}
+```
+
+
 
