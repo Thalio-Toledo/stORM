@@ -19,7 +19,7 @@ At program.cs file
  builder.Services.AddstORM(builder.Configuration);
 ```
 
-## Etities Mapping
+## Entities Mapping
 Create you entity that represent you table in you database
 
 ### Table Annotation
