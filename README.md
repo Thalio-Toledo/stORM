@@ -108,5 +108,11 @@ public class CustumerRepository : DbRepository<Custumer>
 }
 ```
 
+Add your repository in the context of dependecy injection
+``` csharp
+services.AddScoped<CustumerRepository>();
+```
+
+
 
 
