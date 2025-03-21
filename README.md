@@ -11,18 +11,10 @@ At appsettings.json file configure the connection string
 },
 ```
 
-## Extension methods
-Simplify using an extension method to configure you conection.
+## Add stORM 
+Using an extension method addstORM to configure stORM in you application.
 
+At program.cs file 
 ``` csharp
- public static class DbConnectionExtension
- {
-     public static IServiceCollection AddDataBaseConnection(this IServiceCollection services, IConfiguration configuration)
-     {
-         var configOptions = configuration.GetSection("ConnectionStrings");
-         services.Configure<DBConnectionOptions>(configOptions);
-         services.AddstORM(configuration);
-         return services;
-     }
- }
+ builder.Services.AddstORM(builder.Configuration);
 
