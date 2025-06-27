@@ -406,6 +406,105 @@ public class DbRepository<T>
         return this;
     }
 
+    public virtual DbRepository<T> Join<TProperty>(Expression<Func<T, IEnumerable<TProperty>>> predicate)
+    {
+        setConfigInORM();
+
+        static List<Expression> SplitThenJoin<TProperty>(Expression<Func<T, TProperty>> expression)
+        {
+            var Expressions = new List<Expression>();
+
+            void ProcessExpression(Expression exp)
+            {
+                if (exp is MethodCallExpression methodCall && (methodCall.Method.Name == "ThenJoin" || methodCall.Method.Name == "Where"))
+                {
+                    var ExpressionsAux = new List<Expression>();
+
+                    ExpressionsAux.Add(methodCall.Arguments[0]);
+                    ExpressionsAux.Add(methodCall.Arguments[1]);
+
+                    foreach (var item in ExpressionsAux)
+                    {
+                        if (item is MemberExpression member)
+                            Expressions.Add(member);
+                        else
+                            ProcessExpression(item);
+                    }
+                }
+                else if (exp is LambdaExpression lambda)
+                    ProcessExpression(lambda.Body);
+                else if (exp is BinaryExpression binaryExpression)
+                    Expressions.Add(binaryExpression);
+                else if (exp is MemberExpression member)
+                    Expressions.Add(member);
+            }
+
+            ProcessExpression(expression.Body);
+
+            return Expressions;
+        }
+
+        var expressions = SplitThenJoin(predicate);
+
+        var translatorJoin = new JoinTranslator(typeof(T));
+        var translatorWhere = new WhereTranslator(typeof(T));
+
+        var joinsList = new List<JoinEntity>();
+        var whereListSubEntities = new List<WhereModelQuery>();
+        var entity = "";
+
+        foreach (var expression in expressions)
+        {
+            if (expression is MemberExpression member)
+            {
+                var join = new JoinEntity();
+                join = translatorJoin.TranslateExpression(member);
+                entity = join.Entity;
+                //joinsList.Add(join);
+            }
+            else if (expression is BinaryExpression binaryExpression)
+            {
+                var where = new WhereModelQuery();
+                where.Entity = entity;
+                var whereInfo = translatorWhere.TranslateWhereExpression(binaryExpression);
+                where.WhereList.Add(whereInfo.WhereScript);
+                whereListSubEntities.Add(where);
+
+                whereInfo.Entities.ForEach(entity =>
+                {
+                    if (!joinsList.Exists(e => e.Entity == entity))
+                    {
+                        var join = new JoinEntity { Entity = entity, MainEntity = where.Entity };
+                        joinsList.Add(join);
+                    }
+                });
+            }
+        }
+
+        var expressinsMembers = expressions.FindAll(e => e is MemberExpression member);
+
+        joinsList.AddRange(translatorJoin.TranslateExpressions(expressinsMembers));
+
+        joinsList.ForEach(join =>
+        {
+            var existInJoinList = stORMCore._config.JoinsList.Exists(joinExists => joinExists.Entity == join.Entity && joinExists.Name == join.Name);
+
+            if (existInJoinList is false)
+            {
+                stORMCore._config.JoinsList.Add(join);
+            }
+            else
+            {
+                stORMCore._config.JoinsList = stORMCore._config.JoinsList.FindAll(joinEntity => joinEntity.Entity != join.Entity);
+                stORMCore._config.JoinsList.Add(join);
+            }
+        });
+
+        stORMCore._config.SubEntitiesWhereList.AddRange(whereListSubEntities);
+
+        return this;
+    }
+
     /// <summary>
     /// Join with order By Desc, this method will help you to make the principal select with sub select and Order by DESC on sub select.
     /// </summary>
@@ -446,117 +545,117 @@ public class DbRepository<T>
         return this;
     }
 
-    public virtual DbRepository<T> Join<TInner>(Expression<Func<T, IEnumerable<TInner>>> innerSelector)
-    {
-        setConfigInORM();
+    //public virtual DbRepository<T> Join<TInner>(Expression<Func<T, IEnumerable<TInner>>> innerSelector)
+    //{
+    //    setConfigInORM();
 
-        var methodName = ExtractMethod(innerSelector);
+    //    var methodName = ExtractMethod(innerSelector);
 
-        var te = ExtractInnerSelector(innerSelector);
-        var tes = ExtractWherePredicate(innerSelector);
+    //    var te = ExtractInnerSelector(innerSelector);
+    //    var tes = ExtractWherePredicate(innerSelector);
 
-        if (methodName == "ThenJoin")
-        {
-            var translatorJoin = new JoinTranslator(typeof(T), te);
-            var join = translatorJoin.TranslateExpression();
+    //    if (methodName == "ThenJoin")
+    //    {
+    //        var translatorJoin = new JoinTranslator(typeof(T), te);
+    //        var join = translatorJoin.TranslateExpression();
 
-            var existInJoinList = stORMCore._config.JoinsList.Exists(joinExists => joinExists.Entity == join.Entity);
+    //        var existInJoinList = stORMCore._config.JoinsList.Exists(joinExists => joinExists.Entity == join.Entity);
 
-            if (existInJoinList is false)
-            {
-                stORMCore._config.JoinsList.Add(join);
-            }
-            else
-            {
-                stORMCore._config.JoinsList = stORMCore._config.JoinsList.FindAll(joinEntity => joinEntity.Entity != join.Entity);
-                stORMCore._config.JoinsList.Add(join);
-            }
+    //        if (existInJoinList is false)
+    //        {
+    //            stORMCore._config.JoinsList.Add(join);
+    //        }
+    //        else
+    //        {
+    //            stORMCore._config.JoinsList = stORMCore._config.JoinsList.FindAll(joinEntity => joinEntity.Entity != join.Entity);
+    //            stORMCore._config.JoinsList.Add(join);
+    //        }
 
-            var translatorJoin2 = new JoinTranslator(typeof(T), tes);
-            var join2 = translatorJoin2.TranslateExpression();
+    //        var translatorJoin2 = new JoinTranslator(typeof(T), tes);
+    //        var join2 = translatorJoin2.TranslateExpression();
 
-            var existInJoinList2 = stORMCore._config.JoinsList.Exists(joinExists => joinExists.Entity == join2.Entity);
+    //        var existInJoinList2 = stORMCore._config.JoinsList.Exists(joinExists => joinExists.Entity == join2.Entity);
 
-            if (existInJoinList2 is false)
-            {
-                stORMCore._config.JoinsList.Add(join2);
-            }
-            else
-            {
-                stORMCore._config.JoinsList = stORMCore._config.JoinsList.FindAll(joinEntity => joinEntity.Entity != join2.Entity);
-                stORMCore._config.JoinsList.Add(join2);
-            }
-        }
+    //        if (existInJoinList2 is false)
+    //        {
+    //            stORMCore._config.JoinsList.Add(join2);
+    //        }
+    //        else
+    //        {
+    //            stORMCore._config.JoinsList = stORMCore._config.JoinsList.FindAll(joinEntity => joinEntity.Entity != join2.Entity);
+    //            stORMCore._config.JoinsList.Add(join2);
+    //        }
+    //    }
 
-        if (methodName == "Where")
-        {
-            var translator = new WhereTranslator(typeof(TInner));
-            var whereInfo = translator.TranslateWhereExpression(tes);
+    //    if (methodName == "Where")
+    //    {
+    //        var translator = new WhereTranslator(typeof(TInner));
+    //        var whereInfo = translator.TranslateWhereExpression(tes);
 
-            var whereModelQuery = new WhereModelQuery();
-            whereModelQuery.Entity = typeof(TInner).Name;
+    //        var whereModelQuery = new WhereModelQuery();
+    //        whereModelQuery.Entity = typeof(TInner).Name;
 
-            var entities = whereInfo.Entities;
-            whereModelQuery.WhereList.Add(whereInfo.WhereScript);
+    //        var entities = whereInfo.Entities;
+    //        whereModelQuery.WhereList.Add(whereInfo.WhereScript);
 
-            stORMCore._config.SubEntitiesWhereList.Add(whereModelQuery);
+    //        stORMCore._config.SubEntitiesWhereList.Add(whereModelQuery);
 
-            var existInJoinList = false;
+    //        var existInJoinList = false;
 
-            foreach (var entity in entities)
-            {
-                if (entity != typeof(T).Name)
-                {
-                    existInJoinList = stORMCore._config.JoinsList.Exists(join => join.Entity == entity);
-                    if (existInJoinList is false)
-                    {
-                        var joinEntity = new JoinEntity
-                        {
-                            Entity = entity
-                        };
-                        stORMCore._config.JoinsList.Add(joinEntity);
-                    }
-                }
-            }
+    //        foreach (var entity in entities)
+    //        {
+    //            if (entity != typeof(T).Name)
+    //            {
+    //                existInJoinList = stORMCore._config.JoinsList.Exists(join => join.Entity == entity);
+    //                if (existInJoinList is false)
+    //                {
+    //                    var joinEntity = new JoinEntity
+    //                    {
+    //                        Entity = entity
+    //                    };
+    //                    stORMCore._config.JoinsList.Add(joinEntity);
+    //                }
+    //            }
+    //        }
 
-            var translatorJoin = new JoinTranslator(typeof(T), te);
-            var join = translatorJoin.TranslateExpression();
+    //        var translatorJoin = new JoinTranslator(typeof(T), te);
+    //        var join = translatorJoin.TranslateExpression();
 
 
-            existInJoinList = stORMCore._config.JoinsList
-                .Exists(joinExists => joinExists.Entity == join.Entity);
+    //        existInJoinList = stORMCore._config.JoinsList
+    //            .Exists(joinExists => joinExists.Entity == join.Entity);
 
-            if (existInJoinList is false)
-            {
-                stORMCore._config.JoinsList.Add(join);
-            }
-            else
-            {
-                stORMCore._config.JoinsList = stORMCore._config.JoinsList
-                                .FindAll(joinEntity => joinEntity.Entity != join.Entity);
+    //        if (existInJoinList is false)
+    //        {
+    //            stORMCore._config.JoinsList.Add(join);
+    //        }
+    //        else
+    //        {
+    //            stORMCore._config.JoinsList = stORMCore._config.JoinsList
+    //                            .FindAll(joinEntity => joinEntity.Entity != join.Entity);
 
-                stORMCore._config.JoinsList.Add(join);
-            }
-        }
+    //            stORMCore._config.JoinsList.Add(join);
+    //        }
+    //    }
 
-        return this;
-    }
+    //    return this;
+    //}
 
-    public virtual DbRepository<T> AND(Expression<Func<T, bool>> predicate)
-    {
-        setConfigInORM();
+    //public virtual DbRepository<T> AND(Expression<Func<T, bool>> predicate)
+    //{
+    //    setConfigInORM();
 
-        var translator = new AndTranslator(typeof(T), predicate.Body);
-        var joinAnd = translator.TranslateExpression();
+    //    var translator = new AndTranslator(typeof(T), predicate.Body);
+    //    var joinAnd = translator.TranslateExpression();
 
-        var join = stORMCore._config.JoinsList.Last();
-        if (join.Entity == joinAnd.Entity)
-        {
-            join.JoinAnd = joinAnd;
-        }
+    //    var join = stORMCore._config.JoinsList.Last();
+    //    if (join.Entity == joinAnd.Entity)
+    //    {
+    //        join.JoinAnd = joinAnd;
+    //    }
 
-        return this;
-    }
+    //    return this;
+    //}
 
     public virtual DbRepository<T> OrderBy<TProperty>(Expression<Func<T, TProperty>> predicate)
     {
