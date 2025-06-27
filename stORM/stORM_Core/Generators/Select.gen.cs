@@ -308,7 +308,9 @@ public class SelectGen(Config config) : IGenerator
         {
             var count = _config.CountList.Find(count => count.Entity == nestedListClassType.Name);
 
-            _config.ColumnsSubSelect.Add($" COUNT(*) ");
+            //_config.ColumnsSubSelect.Add($" COUNT(*) ");
+            columnsSubSelect.Add($" COUNT(*) ");
+
             _config.isCount = true;
         }
 

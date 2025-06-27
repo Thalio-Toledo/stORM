@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <PackageId>Storm-orm</PackageId>
+	  <Version>1.0.1</Version>
+	  <Authors>Thalio Toledo</Authors>
+	  <Description>stORM is a object-relational mapper for .NET and SQL Server</Description>
+	  <RepositoryUrl>https://github.com/Thalio-Toledo/stORM</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

@@ -83,6 +83,57 @@ namespace BonesORMUnitTests.Select_orm_testes
             result.NormalizeQuery().Should().Be(query.NormalizeQuery());
         }
 
+
+        [Fact]
+        public async Task Given_An_Entity_With_A_SubEntity_One_To_many_Should_Return_An_Entity_with_Count_of_SubEntity()
+        {
+            //Arrange  
+            var options = new Config();
+
+            options.SetEntity(typeof(ProcessoStatus));
+
+            options.JoinsList.Add(new JoinEntity
+            {
+                Entity = typeof(Processo).Name,
+                MainEntity = typeof(ProcessoStatus).Name,
+                JoinFull = true,
+                Name = typeof(Processo).Name
+            });
+
+            options.CountList.Add(new CountModel { Entity = typeof(Processo).Name });
+
+            var select = new SelectGen(options);
+
+            string query = @""" DECLARE @JSON nvarchar(max) 
+                                SET @JSON = (
+
+
+                                SELECT
+                                  [TB_ProSta].Id
+                                  ,[TB_ProSta].label
+                                  ,[TB_ProSta].Ordem
+                                  ,[TB_ProSta].CssClass
+                                  ,[TB_ProSta].IconName
+                                  ,[TB_ProSta].IconStyle
+                                  ,[TB_ProSta].PermitirAlteracaoManual
+                                  ,[TB_ProSta].IdAuxFluxo
+                                  ,
+
+
+                                (SELECT
+                                   COUNT(*)  
+                                FROM TB_PROCESSO (NOLOCK) [TB_Pro] 
+                                WHERE [TB_ProSta].Id = [TB_Pro].IdStatus) AS  Processos 
+                                FROM SocietarioDigital..TB_PROCESSO_STATUS (NOLOCK) [TB_ProSta] 
+                                 FOR JSON PATH) SELECT @JSON AS 'result' """;
+
+            //Assert
+            var result = select.Generate(new ProcessoStatus());
+
+            // Act & Assert
+            result.NormalizeQuery().Should().Be(query.NormalizeQuery());
+        }
+
         [Fact]
         public async Task SHOULD_RETURN_AN_ENTITY_WITH_NESTEDS_SUBENTITIES_JOINS_AND_A_SUBSELECT_QUERY()
         {
