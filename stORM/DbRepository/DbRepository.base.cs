@@ -641,21 +641,21 @@ public class DbRepository<T>
     //    return this;
     //}
 
-    //public virtual DbRepository<T> AND(Expression<Func<T, bool>> predicate)
-    //{
-    //    setConfigInORM();
+    public virtual DbRepository<T> AND(Expression<Func<T, bool>> predicate)
+    {
+        setConfigInORM();
 
-    //    var translator = new AndTranslator(typeof(T), predicate.Body);
-    //    var joinAnd = translator.TranslateExpression();
+        var translator = new AndTranslator(typeof(T), predicate.Body);
+        var joinAnd = translator.TranslateExpression();
 
-    //    var join = stORMCore._config.JoinsList.Last();
-    //    if (join.Entity == joinAnd.Entity)
-    //    {
-    //        join.JoinAnd = joinAnd;
-    //    }
+        var join = stORMCore._config.JoinsList.Last();
+        if (join.Entity == joinAnd.Entity)
+        {
+            join.JoinAnd = joinAnd;
+        }
 
-    //    return this;
-    //}
+        return this;
+    }
 
     public virtual DbRepository<T> OrderBy<TProperty>(Expression<Func<T, TProperty>> predicate)
     {

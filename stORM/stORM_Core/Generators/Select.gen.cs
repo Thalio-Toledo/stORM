@@ -102,7 +102,14 @@ public class SelectGen(Config config) : IGenerator
                 }
             }
             else
-                SetColumnsOneToOne(entity, _config.MainEntity, entity.Name, _config.MainAlias, false, fullInheritance: EntitiesList);
+            {
+                var join = _config.JoinsList.Find(joinExist => joinExist.Entity == entity.Name && joinExist.MainEntity == _config.MainEntity.Name);
+                if(join is not null) 
+                    SetColumnsOneToOne(entity, _config.MainEntity, entity.Name, _config.MainAlias, false, fullInheritance: EntitiesList, joinAnd: join.JoinAnd);
+                else
+                    SetColumnsOneToOne(entity, _config.MainEntity, entity.Name, _config.MainAlias, false, fullInheritance: EntitiesList);
+
+            }
         }
     }
 
@@ -296,10 +303,11 @@ public class SelectGen(Config config) : IGenerator
         var nestedTable = nestedListClassType.GetCustomAttribute<TableAttribute>().Name;
         var NestedAlias = UtilsService.GenerateAlias(nestedListClassType.Name);
         var orderByEntity = _config.OrderByList.Find(orderBy => orderBy.Entity == nestedListClassType.Name);
+        
 
         if (orderByEntity is not null)
         {
-            orderByEntity.EntityAlias = _config.NestedAlias;
+            orderByEntity.EntityAlias = NestedAlias;
             _config.OrderByListSubSelect.Add(orderByEntity);
             _config.OrderByList.Remove(orderByEntity);
         }
