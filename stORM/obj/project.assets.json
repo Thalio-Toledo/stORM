@@ -2062,7 +2062,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.5",
+    "version": "2.0.3",
     "restore": {
       "projectUniqueName": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM.csproj",
       "projectName": "Storm-orm",

@@ -26,6 +26,8 @@ namespace BonesCore.ConfigOptions
 
                     connection.Close();
 
+                    if (result is null) return "";
+
                     return result;
                 }
             }
@@ -47,7 +49,10 @@ namespace BonesCore.ConfigOptions
 
                     connection.Close();
 
+                    if(result is null) return "";
+
                     return result;
+                    
                 }
             }
             catch (Exception ex)
@@ -94,6 +99,8 @@ namespace BonesCore.ConfigOptions
 
                 CloseConnection();
 
+                if (result is null) return "";
+
                 return result;
             }
             catch (Exception ex)
@@ -117,6 +124,8 @@ namespace BonesCore.ConfigOptions
                 string result =  _connection.QueryFirst<string>(script, parameters);
 
                 CloseConnection();
+
+                if (result is null) return "";
 
                 return result;
             }

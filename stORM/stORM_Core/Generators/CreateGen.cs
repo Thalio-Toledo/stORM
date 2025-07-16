@@ -31,6 +31,7 @@ namespace stORM.stORM_Core.Generators
                 {
                     if (prop.PropertyType.IsClass && prop.PropertyType != typeof(string)) continue;
                     if ( prop.GetCustomAttributes(typeof(KeyAttribute), false).Any()) continue;
+                    if ( prop.GetValue(entity, null) != null) continue;
                     else
                         primitiveProps.Add(prop);
                 }

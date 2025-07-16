@@ -110,6 +110,11 @@ public class GroupByModel
         {
             ValueString = $"{value}";
         }
+
+        public void SetValue(Enum value)
+        {
+            ValueString = ((int)(object)value).ToString();
+        }
         public void SetValue(long value)
         {
             ValueInt = value;

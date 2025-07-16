@@ -11,7 +11,7 @@ public class Custumer
     public int Id { get; set; } = 0;
     public string Name { get; set; } = "";
     public bool Active { get; set; } = true;
-    public DateTime Date { get; set; }
+    public DateTime? Date { get; set; }
 
     [ForeignkeyFrom("Address")]
     public int AddressId { get; set; } = 0;

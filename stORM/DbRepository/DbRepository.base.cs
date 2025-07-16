@@ -6,6 +6,9 @@ using confirp_bonescore.BonesCoreOrm.ExpressionsTranslators;
 using BonesCoreOrm.Generators;
 using stORM.Models;
 using stORM.stORM_Core;
+using System;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace stORM.DbRepository;
 
@@ -54,11 +57,30 @@ public class DbRepository<T>
     /// This method is used to get the first result of query. Its like a SELECT TOP(1)
     /// </summary>
     /// <returns></returns>
+    /// 
+    //public virtual dynamic FirstOrDefault()
+    //{
+    //    setConfigInORM();
+    //    stORMCore._config.IsFirst = true;
+    //    return Mapper.Map<T>(stORMCore.Generate<SelectGen>()).First();
+    //}
+
     public virtual dynamic FirstOrDefault()
     {
         setConfigInORM();
-        stORMCore._config.IsFirst = true;
-        return Mapper.Map<T>(stORMCore.Generate<SelectGen>()).First();
+        var result = stORMCore.Generate<SelectGen>();
+
+        if (result == null) return null;
+
+        JArray jsonResponse = JArray.Parse(result);
+
+        List<T> List = jsonResponse.Select(jsonMap =>
+        {
+            string jsonMapString = jsonMap.ToString();
+            return JsonConvert.DeserializeObject<T>(jsonMapString);
+        }).ToList();
+
+        return List.First();
     }
 
     /// <summary>
@@ -71,6 +93,12 @@ public class DbRepository<T>
     {
         setConfigInORM();
         return Mapper.Map<Generic>(stORMCore.Generate<SelectGen>()).First();
+    }
+
+    public async virtual Task<T> FirstOrDefaultAsync()
+    {
+        setConfigInORM();
+        return Mapper.Map<T>(await stORMCore.GenerateAsync<SelectGen>()).First();
     }
 
     public virtual DbRepository<T> FirstOrDefaultOf<TProperty>(Expression<Func<T, TProperty>> predicate)
@@ -167,6 +195,46 @@ public class DbRepository<T>
     public virtual DbRepository<T> Exists<TInner>(Expression<Func<T, IEnumerable<TInner>>> innerSelector)
     {
         setConfigInORM();
+
+        setConfigInORM();
+
+        static List<Expression> SplitThenJoin<TProperty>(Expression<Func<T, TProperty>> expression)
+        {
+            var Expressions = new List<Expression>();
+
+            void ProcessExpression(Expression exp)
+            {
+                if (exp is MethodCallExpression methodCall && (methodCall.Method.Name == "ThenJoin" || methodCall.Method.Name == "Where"))
+                {
+                    var ExpressionsAux = new List<Expression>();
+
+                    ExpressionsAux.Add(methodCall.Arguments[0]);
+                    ExpressionsAux.Add(methodCall.Arguments[1]);
+
+                    foreach (var item in ExpressionsAux)
+                    {
+                        if (item is MemberExpression member)
+                            Expressions.Add(member);
+                        else
+                            ProcessExpression(item);
+                    }
+                }
+                else if (exp is LambdaExpression lambda)
+                    ProcessExpression(lambda.Body);
+                else if (exp is BinaryExpression binaryExpression)
+                    Expressions.Add(binaryExpression);
+                else if (exp is MemberExpression member)
+                    Expressions.Add(member);
+            }
+
+            ProcessExpression(expression.Body);
+
+            return Expressions;
+        }
+
+        var expressions = SplitThenJoin(innerSelector);
+
+
 
         var methodName = ExtractMethod(innerSelector);
 

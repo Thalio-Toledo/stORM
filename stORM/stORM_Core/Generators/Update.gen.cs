@@ -40,6 +40,7 @@ public sealed class UpdateGen(Config config) : IGenerator
                 .ToList()
                 .FindAll(prop => !prop.GetCustomAttributes(typeof(KeyAttribute), false).Any())
                 .FindAll(prop => !(prop.PropertyType.IsClass && prop.PropertyType != typeof(string)))
+                .FindAll(prop => prop.GetValue(MainEntity, null) != null)
                 .FindAll(prop => UtilsService.IsNotNull(prop.GetValue(MainEntity, null)))
                 .ForEach(prop => _config.ColumnsSet.Add(new ColumnSet(prop.Name, prop.GetValue(MainEntity, null))));
 

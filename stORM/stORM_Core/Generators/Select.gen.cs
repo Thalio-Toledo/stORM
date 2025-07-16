@@ -384,7 +384,7 @@ public class SelectGen(Config config) : IGenerator
             .FindAll(whereModel => whereModel.Entity == nestedListClassType.Name || whereModel.MainEntity == nestedListClassType.Name);
 
         whereEntitys.ForEach(whereModel =>
-        _config.WhereListSubSelect.Add($"{whereModel.EntityAlias ?? _config.NestedAlias}.{whereModel.EntityProp} {whereModel.SqlOperator} {whereModel.Value}"));
+        _config.WhereListSubSelect.Add($"{whereModel.EntityAlias ?? UtilsService.GenerateAlias(whereModel.Entity)}.{whereModel.EntityProp} {whereModel.SqlOperator} {whereModel.Value}"));
 
         _config.WhereModelList = _config.WhereModelList.Except(whereEntitys).ToList();
     }

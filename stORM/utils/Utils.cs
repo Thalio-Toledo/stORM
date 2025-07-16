@@ -127,6 +127,16 @@ namespace stORM.utils
             return true;
         }
 
+        public static bool IsNotNull(Enum? content)
+        {
+            if (content == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public static bool IsNotNull(Guid? content)
         {
             if (content == Guid.Empty)

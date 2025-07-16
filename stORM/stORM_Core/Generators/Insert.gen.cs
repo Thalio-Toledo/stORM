@@ -54,14 +54,18 @@ public sealed class InsertGen(Config config) : IGenerator
             $"{CodesEnum.BRTAB}{string.Join(",", _config.ColumnsSet.ConvertAll(itemColumns => { return itemColumns.GetValue(); }))}" +
             $"{CodesEnum.BR})";
 
-    protected void SetColumnsValueCreate(dynamic MainEntity) =>
+    protected void SetColumnsValueCreate(dynamic MainEntity)
+    {
          _config.MainEntity
-                .GetProperties()
-                .ToList()
-                .FindAll(prop => !prop.GetCustomAttributes(typeof(KeyAttribute), false).Any())
-                .FindAll(prop => !(prop.PropertyType.IsClass && prop.PropertyType != typeof(string)))
-                .FindAll(prop => UtilsService.IsNotNull(prop.GetValue(MainEntity, null)))
-                .ForEach(prop => _config.ColumnsSet.Add(new ColumnSet(prop.Name, prop.GetValue(MainEntity, null))));
+                  .GetProperties()
+                  .ToList()
+                  .FindAll(prop => !prop.GetCustomAttributes(typeof(KeyAttribute), false).Any())
+                  .FindAll(prop => !(prop.PropertyType.IsClass && prop.PropertyType != typeof(string)))
+                  .FindAll(prop => prop.GetValue(MainEntity, null) != null)
+                  .FindAll(prop => UtilsService.IsNotNull(prop.GetValue(MainEntity, null)))
+                  .ForEach(prop => _config.ColumnsSet.Add(new ColumnSet(prop.Name, prop.GetValue(MainEntity, null))));
+    }
+        
     private string GetPrimaryKey() =>
        _config.MainEntity
                .GetProperties()

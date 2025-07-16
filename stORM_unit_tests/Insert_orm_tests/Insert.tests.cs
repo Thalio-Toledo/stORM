@@ -3,6 +3,7 @@ using FluentAssertions;
 using stORM.stORM_Core;
 using stORM.utils;
 using stORM_unit_tests.Entities.Entities_custumer;
+using stORM_unit_tests.Entities.Entitys_societario;
 using static stORM.Models.GroupByModel;
 
 namespace BonesORMUnitTests.Insert_orm_tests;
@@ -15,7 +16,7 @@ public class InsertTests
         //Arrange  
         var options = new Config();
 
-        var table = new Custumer() { Id = 1, Name = "Custumer", AddressId = 1, Active = true };
+        var table = new Custumer() { Id = 0, Name = "Custumer", AddressId = 1, Active = true, Date = null };
         options.SetEntity(typeof(Custumer));
 
         var insert = new InsertGen(options);
@@ -27,6 +28,35 @@ public class InsertTests
                             )
                             OUTPUT INSERTED.Id INTO @OUTPUT
                             VALUES('Custumer',1,1)
+
+                            SELECT Id FROM @OUTPUT """;
+
+        //Assert
+        var result = insert.Generate(table);
+
+        // Act & Assert
+        result.NormalizeQuery().Should().Be(query.NormalizeQuery());
+    }
+
+    [Fact]
+    public async Task Generate_Insert_SolicitacaoIntegracaoEmpresa()
+    {
+        //Arrange  
+        var options = new Config();
+
+        var table = new SolicitacaoIntegracaoEmpresa();
+        options.SetEntity(typeof(SolicitacaoIntegracaoEmpresa));
+
+        var insert = new InsertGen(options);
+        string query = @""" DECLARE @OUTPUT TABLE(Id bigint)
+
+                            INSERT INTO TB_SOLICITACAO_INTEGRACAO_EMPRESA(
+                              IdUsuarioSolicitacao,SolicitacaoDataInicio,SolicitacaoDataFim,Ativo,SolicitacaoTipo
+                            )
+                            OUTPUT INSERTED.Id INTO @OUTPUT
+                            VALUES(
+                              1,'20250716 15:47:25.685','20250716 15:47:25.685',1,'1'
+                            )
 
                             SELECT Id FROM @OUTPUT """;
 

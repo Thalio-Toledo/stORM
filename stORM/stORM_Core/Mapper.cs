@@ -9,7 +9,7 @@ public static class Mapper
 {
     public static List<U> Map<U>(string result)
     {
-        if (result == null) return null;
+        if (result == null || result == string.Empty) return null;
 
         try
         {
