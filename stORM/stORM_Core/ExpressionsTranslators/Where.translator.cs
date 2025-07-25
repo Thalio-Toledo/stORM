@@ -50,6 +50,23 @@ public class BinaryExpressionExtractor : ExpressionVisitor
     public BinaryExpressionExtractor(string searchString)
     {
         _searchString = searchString.Trim('(', ' ', ')');
+        _searchString = ExtractCoreExpression(searchString);
+
+    }
+
+    private string ExtractCoreExpression(string input)
+    {
+        // Remove chaves externas, se existirem
+        if (input.StartsWith("{") && input.EndsWith("}"))
+            input = input.Substring(1, input.Length - 2);
+
+        // Tenta remover os parênteses mais externos
+        while (input.StartsWith("(") && input.EndsWith(")"))
+        {
+            input = input.Substring(1, input.Length - 2);
+        }
+
+        return input.Trim();
     }
 
     protected override Expression VisitBinary(BinaryExpression node)
@@ -162,7 +179,8 @@ public class WhereTranslator
                 var open = new string(expre.Where(c => c == '(').ToArray());
                 var close = new string(expre.Where(c => c == ')').ToArray());
 
-                var extractedExpression = ExtractBinaryExpression(expression, expre);
+
+                var extractedExpression = ExtractBinaryExpression(expression, BalanceExpression(expre));
 
                 if(extractedExpression is null)
                 {
@@ -187,6 +205,31 @@ public class WhereTranslator
          whereInfo.WhereScript = string.Join(" ", expressoes);
 
         return whereInfo;
+    }
+
+    public static string BalanceExpression(string input)
+    {
+        input = input.Trim();
+
+        int openCount = input.Count(c => c == '(');
+        int closeCount = input.Count(c => c == ')');
+
+        if (openCount > closeCount)
+        {
+            // Fecha os parênteses faltantes
+            input = input + new string(')', openCount - closeCount);
+        }
+        else if (closeCount > openCount)
+        {
+            // Remove parênteses fechando a mais no início
+            int toRemove = closeCount - openCount;
+            for (int i = 0; i < toRemove && input.StartsWith(")"); i++)
+            {
+                input = input.Substring(1);
+            }
+        }
+
+        return input;
     }
 
     public WhereModel TranslatorExpression(Expression expression)

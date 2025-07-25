@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<PackageId>Storm-orm</PackageId>
-	<Version>2.0.3</Version>
+	<Version>2.0.8</Version>
 	<Authors>Thalio Toledo</Authors>
 	<Description>stORM is a object-relational mapper for .NET and SQL Server</Description>
 	<RepositoryUrl>https://github.com/Thalio-Toledo/stORM</RepositoryUrl>

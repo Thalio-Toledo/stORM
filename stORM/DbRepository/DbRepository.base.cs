@@ -58,30 +58,34 @@ public class DbRepository<T>
     /// </summary>
     /// <returns></returns>
     /// 
-    //public virtual dynamic FirstOrDefault()
-    //{
-    //    setConfigInORM();
-    //    stORMCore._config.IsFirst = true;
-    //    return Mapper.Map<T>(stORMCore.Generate<SelectGen>()).First();
-    //}
-
     public virtual dynamic FirstOrDefault()
     {
         setConfigInORM();
-        var result = stORMCore.Generate<SelectGen>();
+        stORMCore._config.IsFirst = true;
 
-        if (result == null) return null;
+        var result = Mapper.Map<T>(stORMCore.Generate<SelectGen>());
 
-        JArray jsonResponse = JArray.Parse(result);
-
-        List<T> List = jsonResponse.Select(jsonMap =>
-        {
-            string jsonMapString = jsonMap.ToString();
-            return JsonConvert.DeserializeObject<T>(jsonMapString);
-        }).ToList();
-
-        return List.First();
+        if (result is not null) return result.First();
+        else return null;
     }
+
+    //public virtual dynamic FirstOrDefault()
+    //{
+    //    setConfigInORM();
+    //    var result = stORMCore.Generate<SelectGen>();
+
+    //    if (result == null) return null;
+
+    //    JArray jsonResponse = JArray.Parse(result);
+
+    //    List<T> List = jsonResponse.Select(jsonMap =>
+    //    {
+    //        string jsonMapString = jsonMap.ToString();
+    //        return JsonConvert.DeserializeObject<T>(jsonMapString);
+    //    }).ToList();
+
+    //    return List.First();
+    //}
 
     /// <summary>
     /// This method is used to get the first result of a different entity on query. It is like SELECT TOP(1), and is most used
@@ -92,13 +96,21 @@ public class DbRepository<T>
     public virtual dynamic FirstOrDefault<Generic>()
     {
         setConfigInORM();
-        return Mapper.Map<Generic>(stORMCore.Generate<SelectGen>()).First();
+
+        var result = Mapper.Map<Generic>(stORMCore.Generate<SelectGen>());
+
+        if (result is not null) return result.First();
+        else return null;
     }
 
-    public async virtual Task<T> FirstOrDefaultAsync()
+    public async virtual Task<dynamic> FirstOrDefaultAsync()
     {
         setConfigInORM();
-        return Mapper.Map<T>(await stORMCore.GenerateAsync<SelectGen>()).First();
+
+        var result = Mapper.Map<T>(await stORMCore.GenerateAsync<SelectGen>());
+
+        if (result is not null) return result.First();
+        else return null;
     }
 
     public virtual DbRepository<T> FirstOrDefaultOf<TProperty>(Expression<Func<T, TProperty>> predicate)
