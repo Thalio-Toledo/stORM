@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\dbrepository\\dbrepository.base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\dbrepository\\dbrepository.base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\extensions\\stormextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\extensions\\stormextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\dbrepository\\extensions\\dbrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\dbrepository\\extensions\\dbrepositoryextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm_core\\generators\\select.gen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm_core\\generators\\select.gen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\dataanotattions\\foreignkeyfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\dataanotattions\\foreignkeyfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|c:\\users\\thalio\\documents\\projects\\storm\\storm\\storm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{28AAA1FD-269D-4D01-80E5-1B04186B4444}|stORM\\stORM.csproj|solutionrelative:storm\\storm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,27 +47,78 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "stOrmExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\Extensions\\stOrmExtensions.cs",
+              "RelativeDocumentMoniker": "stORM\\Extensions\\stOrmExtensions.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\Extensions\\stOrmExtensions.cs",
+              "RelativeToolTip": "stORM\\Extensions\\stOrmExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T12:37:48.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DbRepositoryExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "RelativeDocumentMoniker": "stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "RelativeToolTip": "stORM\\DbRepository\\Extensions\\DbRepositoryExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T12:37:41.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Select.gen.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Generators\\Select.gen.cs",
+              "RelativeDocumentMoniker": "stORM\\stORM_Core\\Generators\\Select.gen.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM_Core\\Generators\\Select.gen.cs",
+              "RelativeToolTip": "stORM\\stORM_Core\\Generators\\Select.gen.cs",
+              "ViewState": "AgIAAD4CAAAAAAAAAAAAAEIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T21:43:39.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ForeignkeyFrom.cs",
+              "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DataAnotattions\\ForeignkeyFrom.cs",
+              "RelativeDocumentMoniker": "stORM\\DataAnotattions\\ForeignkeyFrom.cs",
+              "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DataAnotattions\\ForeignkeyFrom.cs",
+              "RelativeToolTip": "stORM\\DataAnotattions\\ForeignkeyFrom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T13:34:54.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DbRepository.base.cs",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\DbRepository.base.cs",
               "RelativeDocumentMoniker": "stORM\\DbRepository\\DbRepository.base.cs",
               "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\DbRepository\\DbRepository.base.cs",
               "RelativeToolTip": "stORM\\DbRepository\\DbRepository.base.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:18:35.679Z"
+              "WhenOpened": "2025-07-16T21:18:35.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "stORM.csproj",
               "DocumentMoniker": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM.csproj",
               "RelativeDocumentMoniker": "stORM\\stORM.csproj",
               "ToolTip": "C:\\Users\\Thalio\\Documents\\Projects\\stORM\\stORM\\stORM.csproj",
               "RelativeToolTip": "stORM\\stORM.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-16T21:12:22.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-16T21:12:22.213Z"
             }
           ]
         }

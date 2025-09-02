@@ -49,7 +49,6 @@ public class BinaryExpressionExtractor : ExpressionVisitor
 
     public BinaryExpressionExtractor(string searchString)
     {
-        _searchString = searchString.Trim('(', ' ', ')');
         _searchString = ExtractCoreExpression(searchString);
 
     }
@@ -178,7 +177,6 @@ public class WhereTranslator
             {
                 var open = new string(expre.Where(c => c == '(').ToArray());
                 var close = new string(expre.Where(c => c == ')').ToArray());
-
 
                 var extractedExpression = ExtractBinaryExpression(expression, BalanceExpression(expre));
 
@@ -542,22 +540,55 @@ public class WhereTranslator
         return null;
 
     }
+    //public object GetMemberValue(MemberExpression memberExpression)
+    //{
+    //    // Extrair o objeto pai (que é a closure capturada, por exemplo <>c__DisplayClass0_0)
+    //    if (memberExpression.Expression is MemberExpression innerMember)
+    //    {
+    //        // Pegue o objeto 'filter' que está dentro da closure
+    //        var closure = (ConstantExpression)innerMember.Expression;
+    //        var closureObject = closure.Value;
+
+    //        // Pegue o campo 'filter' da closure usando reflexão
+    //        var fieldInfo = (FieldInfo)innerMember.Member;
+    //        var filterObject = fieldInfo.GetValue(closureObject);
+
+    //        // Agora, pegue o campo 'Id' do objeto 'filter'
+    //        var propertyInfo = (PropertyInfo)memberExpression.Member;
+    //        return propertyInfo.GetValue(filterObject);
+    //    }
+
+    //    return null;
+    //}
+
     public object GetMemberValue(MemberExpression memberExpression)
     {
-        // Extrair o objeto pai (que é a closure capturada, por exemplo <>c__DisplayClass0_0)
+        // Caso 1: propriedade de instância dentro de closure (ex: filter.Id)
         if (memberExpression.Expression is MemberExpression innerMember)
         {
-            // Pegue o objeto 'filter' que está dentro da closure
             var closure = (ConstantExpression)innerMember.Expression;
             var closureObject = closure.Value;
 
-            // Pegue o campo 'filter' da closure usando reflexão
             var fieldInfo = (FieldInfo)innerMember.Member;
             var filterObject = fieldInfo.GetValue(closureObject);
 
-            // Agora, pegue o campo 'Id' do objeto 'filter'
             var propertyInfo = (PropertyInfo)memberExpression.Member;
             return propertyInfo.GetValue(filterObject);
+        }
+
+        // Caso 2: propriedade estática (ex: DateTime.Now)
+        if (memberExpression.Expression is null && memberExpression.Member is PropertyInfo staticProperty)
+        {
+            return staticProperty.GetValue(null); // Propriedades estáticas não têm "target"
+        }
+
+        // Caso 3: propriedade estática com tipo especificado
+        if (memberExpression.Expression is ConstantExpression ce)
+        {
+            if (memberExpression.Member is FieldInfo fi)
+                return fi.GetValue(ce.Value);
+            if (memberExpression.Member is PropertyInfo pi)
+                return pi.GetValue(ce.Value);
         }
 
         return null;

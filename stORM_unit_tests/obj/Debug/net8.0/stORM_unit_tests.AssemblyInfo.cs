@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("stORM_unit_tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d643164cdf1e1b6959e1f809c9e50271a5d0b6d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bec6d28ca8fe1e08497dd98dc84a7c19441a2cd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("stORM_unit_tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("stORM_unit_tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -78,8 +78,9 @@ public class stORMCore
     public string Query(string query, object parameters) => _connectionOptions.Query(query, parameters);
     public IEnumerable<T> Query<T>(string query, object parameters) => _connectionOptions.Query<T>(query, parameters);
     public string QueryFirst(string query, object parameters) => _connectionOptions.QueryFirst(query, parameters);
-    private static void Rollback() => _connectionOptions.Rollback();
+    public static void Rollback() => _connectionOptions.Rollback();
     public static void Savechanges() => _connectionOptions.Commit();
+    public void RollBack() => _connectionOptions.Rollback();
     public void SaveChanges() => _connectionOptions.Commit();
     
 }
